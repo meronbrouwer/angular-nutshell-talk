@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   }
 
   public onLogin(username: string, password: string): void {
-    console.log('Login has been called, hooray!');
+    this.loginService.login(username, password);
   }
 
 }
