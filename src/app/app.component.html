@@ -1,8 +1,8 @@
 <div>
   <div> Welcome to Spotitube</div>
-  <div><input></div>
-  <div><input type="password"></div>
+  <div><input #username></div>
+  <div><input #password type="password"></div>
   <div>
-    <button>Login</button>
+    <button (click)="onLogin(username.value, password.value)">Login</button>
   </div>
 </div>
