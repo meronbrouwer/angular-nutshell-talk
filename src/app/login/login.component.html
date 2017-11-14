@@ -1,3 +1,8 @@
-<p>
-  login works!
-</p>
+<div>
+  <div> Welcome to Spotitube</div>
+  <div><input #username></div>
+  <div><input #password type="password"></div>
+  <div>
+    <button (click)="onLogin(username.value, password.value)">Login</button>
+  </div>
+</div>

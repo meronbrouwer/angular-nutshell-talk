@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public onLogin(username: string, password: string): void {
-    console.log('Login has been called, hooray!');
-  }
+
 }
