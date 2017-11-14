@@ -1,1 +1,2 @@
-<app-login></app-login>
+<app-login *ngIf="!token"></app-login>
+<div *ngIf="token"> User with token: {{token}} has logged in</div>
