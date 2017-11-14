@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {LoginService} from '../services/login/login.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService: LoginService) {
+  }
 
   ngOnInit() {
   }

@@ -1,8 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import {AppComponent} from './app.component';
+import {LoginComponent} from './login/login.component';
+import {LoginService} from './services/login/login.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
