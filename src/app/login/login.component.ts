@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {LoginService} from '../services/login/login.service';
+import {LoginService} from "../service/login/login.service";
+
 
 @Component({
   selector: 'app-login',
@@ -18,5 +19,4 @@ export class LoginComponent implements OnInit {
   public onLogin(username: string, password: string): void {
     this.loginService.login(username, password);
   }
-
 }

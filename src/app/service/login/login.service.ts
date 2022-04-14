@@ -1,17 +1,19 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
-import {LoginResponse} from './dto/login-response.dto';
-import {LoginRequest} from './dto/login-request.dto';
-import {Subject} from 'rxjs/Subject';
+import {LoginRequest} from "./dto/login-request.dto";
+import {LoginResponse} from "./dto/login-response.dto";
+import {Subject} from "rxjs";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class LoginService {
 
   private tokenReceived = new Subject<string>();
   public tokenReceived$ = this.tokenReceived.asObservable();
 
-  private token: string;
-  private user: string;
+  private token: string | undefined;
+  private user: string | undefined;
 
   constructor(private httpClient: HttpClient) {
   }
@@ -39,6 +41,7 @@ export class LoginService {
     this.user = undefined;
 
     console.log('An error has occured ', error.status);
+    // @ts-ignore
     this.tokenReceived.next(this.token);
   }
 }
